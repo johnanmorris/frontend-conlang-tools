@@ -1,13 +1,11 @@
-<!-- TAKEN FROM EMBER TUTORIAL: CHANGE THE DIV CLASSES LATER!!! -->
-<div class="container">
-  <nav>
-    {{#link-to 'index'}}<h1 class="left"><em>Conlanging Website</em></h1>{{/link-to}}
-    <div class="left links">
-      {{#link-to 'about'}}About{{/link-to}}
-      {{#link-to 'contact'}}Contact{{/link-to}}
-    </div>
+  <nav class="row">
+    <ul class="menu">
+        <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+        <li>{{#link-to 'about'}}About{{/link-to}}</li>
+        <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+        <li>{{#link-to 'languages'}}Languages{{/link-to}}</li>
+    </ul>
   </nav>
-  <body>
-    {{outlet}}
-  </body>
-</div>
+  <main class="row">
+  {{outlet}}
+</main>

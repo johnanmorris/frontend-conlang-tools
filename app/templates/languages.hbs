@@ -1,8 +1,8 @@
-<ul class="languages">
+<article class="row small-up-2 medium-up-3 large-up-4">
   {{#each model as |language|}}
-    <li>
-      <h3>{{language.name}}</h3>
-      <p>{{language.description}}</p>
-    </li>
+  <section class="column column-block">
+    <h3>{{language.name}}</h3>
+    <p>{{language.description}}</p>
+  </section>
   {{/each}}
-</ul>
+</article>

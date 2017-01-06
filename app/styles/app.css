@@ -1,1 +1,56 @@
-@import "foundation.min.css"
+@import "foundation.min.css";
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Quicksand');
+
+* {
+  margin: 1em;
+}
+
+body {
+  background-color: #E6DFD0;
+  color: #653239;
+  font-size: 14pt;
+}
+
+body, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Merienda One', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  color: #A44200;
+}
+
+a:hover {
+  color: #0B3954;
+  font-weight: bold;
+}
+
+.active, a.active {
+  background-color: #653239;
+  color: #CCC7B9;
+}
+
+.menu {
+  border-bottom: 3px solid #653239;
+  font-weight: bold;
+}
+
+.menu li {
+  border-radius: 20 20 0 0;
+}
+
+@media only screen and (max-width: 438px) {
+  p {text-align: left;}
+}

@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('contact');
   this.route('languages', function() {
     this.route('show', {path: '/:language_id'});
+    this.route('new');
   });
 });
 

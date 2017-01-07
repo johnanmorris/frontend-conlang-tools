@@ -2,7 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.get('store').findRecord('language', params.language_id);
+    return this.store.findRecord('language', params.language_id);
+  },
+
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    controller.set('title', 'Edit language');
+    controller.set('buttonLabel', 'Save Changes');
+  },
+
+  renderTemplate(){
+    this.render('languages/form');
   },
 
   actions: {

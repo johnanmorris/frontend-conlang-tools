@@ -1,10 +1,16 @@
-<article class="row small-up-2 medium-up-3 large-up-4">
+<article class="row small-up-2 medium-up-3 large-up-6">
+  <h2>Your Languages</h2>
   {{#each model as |language|}}
-  <section class="column column-block">
-    <h3>{{#link-to 'languages.show' language}}{{language.name}}{{/link-to}}</h3>
-    <p>{{language.description}}</p>
+  <section class="column">
+    <p>
+      {{#link-to 'languages.show' language}}{{language.name}}{{/link-to}}
+
+      <section class="small button-group">
+        {{#link-to 'languages.edit' language class="button"}}edit details{{/link-to}}
+      </section>
+    </p>
   </section>
   {{/each}}
 </article>
-{{#link-to 'languages.new'}}Add new{{/link-to}}
+
 {{outlet}}

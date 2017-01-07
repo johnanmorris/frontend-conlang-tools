@@ -15,8 +15,11 @@ body, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
+}
+
+h1 {
   font-family: 'Merienda One', cursive;
 }
 
@@ -39,7 +42,20 @@ a:hover {
 
 .active, a.active {
   background-color: #653239;
-  color: #CCC7B9;
+  color: #E6DFD0;
+}
+
+.button, .button.active, .button:hover {
+  background-color: #0B3954;
+  color: #FFFFFF;
+}
+
+.button:hover {
+  font-weight: bold;
+}
+
+.active:hover, a.active:hover, .button:hover {
+  font-weight: bold;
 }
 
 .menu {
@@ -49,6 +65,12 @@ a:hover {
 
 .menu li {
   border-radius: 20 20 0 0;
+}
+
+small a {
+  color: #653239;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 438px) {

@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    return this.store.createRecord('library');
+    return this.store.createRecord('language');
   },
 
   actions: {

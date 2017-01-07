@@ -1,4 +1,11 @@
-{{model.name}}
-{{model.description}}
+<h2>{{model.name}}</h2>
+<p>
+  <strong>Description:</strong>
+  {{#if model.description}}
+     {{model.description}}
+  {{else}}
+    None
+  {{/if}}
+</p>
 
 {{outlet}}

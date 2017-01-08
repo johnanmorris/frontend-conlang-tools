@@ -67,6 +67,15 @@ a:hover {
   border-radius: 20 20 0 0;
 }
 
+#lang-phoneme {
+  margin-left: 2.5em;
+  font-family: 'Times New Roman', serif;
+}
+
+#lang-phoneme li {
+  list-style: none;
+}
+
 small a {
   color: #653239;
   text-transform: uppercase;

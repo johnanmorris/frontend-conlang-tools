@@ -8,10 +8,22 @@
   {{/if}}
 </p>
 
-{{outlet}}
+<p><strong>Phonemes:</strong>
+{{#if model.phonemes}}
+<ul class="row small-up-2 medium-up-3 large-up-6" id="lang-phoneme">
+  {{#each model.phonemes as |phoneme|}}
+    <li class="column">{{phoneme.ipa}}</li>
+  {{/each}}
+</ul>
+{{else}}
+  None yet
+{{/if}}
+</p>
 
 <section class="row">
   <p class="large-offset-5 large-7 columns">
     {{#link-to 'languages.index' class='button'}}List All Languages{{/link-to}}
   </p>
 </section>
+
+{{outlet}}

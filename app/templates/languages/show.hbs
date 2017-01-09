@@ -8,7 +8,7 @@
   {{/if}}
 </p>
 
-<p><strong>Phonemes:</strong>
+<!-- <p><strong>Phonemes:</strong>
 {{#if model.phonemes}}
 <ul class="row small-up-2 medium-up-3 large-up-6" id="lang-phoneme">
   {{#each model.phonemes as |phoneme|}}
@@ -18,7 +18,298 @@
 {{else}}
   None yet
 {{/if}}
-</p>
+</p> -->
+
+<h3>Consonants</h3>
+<table class="phonemes">
+  <thead>
+    <tr>
+      <td></td>
+      <th colspan="2">Bi&shy;labial</th>
+      <th colspan="2">Labio&shy;dental</th>
+      <th colspan="2">Den<wbr>tal</th>
+      <th colspan="2">Alve<wbr>olar</th>
+      <th colspan="2">Post<wbr>alveolar</th>
+      <th colspan="2">Retro<wbr>flex</th>
+      <th colspan="2">Pala<wbr>tal</th>
+      <th colspan="2">Ve<wbr>lar</th>
+      <th colspan="2">Uvu<wbr>lar</th>
+      <th colspan="2">Phary<wbr>ngeal</th>
+      <th colspan="2">Glot<wbr>tal</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>Plosive</th>
+      <!-- onclick="ipa('Voiceless_bilabial_plosive'); -->
+      <td id="ph-1">p</td>
+      <td id="ph-2">b</td>
+      <td></td>
+      <td></td>
+      <td colspan="3" id="ph-3">t</td>
+      <td colspan="3" id="ph-4">d</td>
+      <td id="ph-5">ʈ</td>
+      <td id="ph-6">ɖ</td>
+      <td id="ph-7">c</td>
+      <td id="ph-8">ɟ</td>
+      <td id="ph-9">k</td>
+      <td id="ph-10">g</td>
+      <td id="ph-11">q</td>
+      <td id="ph-12">ɢ</td>
+      <td><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td id="ph-13">ʔ</td>
+      <td class="impossible"><!--empty --></td>
+    </tr>
+
+    <tr>
+      <th>Nasal</th>
+      <td><!--empty --></td>
+      <td id="ph-14">m</td>
+      <td><!--empty --></td>
+      <td id="ph-15">ɱ</td>
+      <td colspan="3"><!--empty --></td>
+      <td id="ph-16" colspan="3">n</td>
+      <td><!--empty --></td>
+      <td id="ph-17">ɳ</td>
+      <td><!--empty --></td>
+      <td id="ph-18">ɲ</td>
+      <td><!--empty --></td>
+      <td id="ph-19">ŋ</td>
+      <td><!--empty --></td>
+      <td id="ph-20">ɴ</td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+    </tr>
+
+    <tr>
+      <th>Trill</th>
+      <td><!--empty --></td>
+      <td id="ph-21">ʙ</td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td colspan="3"><!--empty --></td>
+      <td id="ph-22" colspan="3">r</td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td><!--empty --></td>
+      <td id="ph-23">ʀ</td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+    </tr>
+
+    <tr>
+      <th>Tap/Flap</th>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td id="ph-24">ⱱ</td>
+      <td colspan="3"><!--empty --></td>
+      <td id="ph-25" colspan="3">ɾ</td>
+      <td><!--empty --></td>
+      <td id="ph-26">ɽ</td>
+      <td></td><td></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+    </tr>
+
+    <tr>
+      <th>Fricative</th>
+      <td id="ph-27">ɸ</td>
+      <td id="ph-28">β</td>
+      <td id="ph-29">f</td>
+      <td id="ph-30">v</td>
+      <td id="ph-31">θ</td>
+      <td id="ph-31">ð</td>
+      <td id="ph-33">s</td>
+      <td id="ph-34">z</td>
+      <td id="ph-35">ʃ</td>
+      <td id="ph-36">ʒ</td>
+      <td id="ph-37">ʂ</td>
+      <td id="ph-38">ʐ</td>
+      <td id="ph-39">ç</td>
+      <td id="ph-40">ʝ</td>
+      <td id="ph-41">x</td>
+      <td id="ph-42">ɣ</td>
+      <td id="ph-43">χ</td>
+      <td id="ph-44">ʁ</td>
+      <td id="ph-45">ħ</td>
+      <td id="ph-46">ʕ</td>
+      <td id="ph-47">h</td>
+      <td id="ph-48">ɦ</td>
+    </tr>
+
+    <tr>
+      <th>Lateral Fricative</th>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td id="ph-49" colspan="3">ɬ</td>
+      <td id="ph-50" colspan="3">ɮ</td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+    </tr>
+
+    <tr>
+      <th>Approximant</th>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td id="ph-51">ʋ</td>
+      <td colspan="3"><!--empty --></td>
+      <td id="ph-52" colspan="3">ɹ</td>
+      <td><!--empty --></td>
+      <td id="ph-53">ɻ</td>
+      <td><!--empty --></td>
+      <td id="ph-54">j</td>
+      <td><!--empty --></td>
+      <td id="ph-55">ɰ</td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+    </tr>
+
+    <tr>
+      <th>Lateral Approximant</th>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td colspan="3"><!--empty --></td>
+      <td id="ph-56" colspan="3">l</td>
+      <td><!--empty --></td>
+      <td id="ph-57">ɭ</td>
+      <td><!--empty --></td>
+      <td id="ph-58">ʎ</td>
+      <td><!--empty --></td>
+      <td id="ph-59">ʟ</td>
+      <td><!--empty --></td>
+      <td><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+      <td class="impossible"><!--empty --></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="23">
+        Voiceless consonants are on the left.
+        Voiced consonants are on the right.<br>
+        Shaded areas are deemed impossible articulations.
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+<h3>Other Symbols</h3>
+<section class="row">
+  <div class="large-offset-4 large-4 columns end">
+    <table id="other-phonemes" class="phonemes">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Desription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="ph-60">ʍ</td>
+          <td>voiceless labial-velar fricative</td>
+        </tr>
+        <tr>
+          <td id="ph-61">w</td>
+          <td>voiced labial-velar approximant</td>
+        </tr>
+        <tr>
+          <td id="ph-62">ɥ</td>
+          <td>voiced labial-palatal approximant</td>
+        </tr>
+        <tr>
+          <td id="ph-63">ʡ</td>
+          <td>epiglottal plosive</td>
+        </tr>
+        <tr>
+          <td id="ph-64">ɕ</td>
+          <td>voiceless alveo-palatal fricative</td>
+        </tr>
+        <tr>
+          <td id="ph-65">ʑ</td>
+          <td>voiced alveo-palatal fricative</td>
+        </tr>
+        <tr>
+          <td id="ph-66">ɺ</td>
+          <td>voiced alveolar flap</td>
+        </tr>
+        <tr>
+          <td id="ph-67">ɧ</td>
+          <td>simultaneous ʃ and x</td>
+        </tr>
+        <tr>
+          <td id="ph-68">t͡s</td>
+          <td>voiceless alveolar affricate</td>
+        </tr>
+        <tr>
+          <td id="ph-69">d͡z</td>
+          <td>voiced alveolar affricate</td>
+        </tr>
+        <tr>
+          <td id="ph-70">t͡ʃ</td>
+          <td>voiceless alveolo-palatal affricate</td>
+        </tr>
+        <tr>
+          <td id="ph-71">d͡ʒ</td>
+          <td>voiced alveolo-palatal affricate</td>
+        </tr>
+        <tr>
+          <td id="ph-72">t͡ɕ</td>
+          <td>voiceless palato-alveolar affricate</td>
+        </tr>
+        <tr>
+          <td id="ph-73">d͡ʑ</td>
+          <td>voiced palato-alveolar affricate</td>
+        </tr>
+        <tr>
+          <td id="ph-74">ʈ͡ʂ</td>
+          <td>voiceless retroflex affricate</td>
+        </tr>
+        <tr>
+          <td id="ph-75">ɖ͡ʐ</td>
+          <td>voiced retroflex affricate</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <section class="row">
   <p class="large-offset-5 large-7 columns">

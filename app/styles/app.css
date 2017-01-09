@@ -15,7 +15,7 @@ body, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
   text-align: center;
 }
 
@@ -84,4 +84,71 @@ small a {
 
 @media only screen and (max-width: 438px) {
   p {text-align: left;}
+}
+
+.phonemes tbody td {
+  font-family: 'Times New Roman', serif;
+  font-size: 13pt;
+}
+
+.impossible {
+  background-color: #7c7b7b;
+}
+
+.phonemes table {
+  font-size: 11pt;
+  text-align: center;
+}
+
+table tr:nth-of-type(even) {
+    background-color: transparent !important;
+}
+
+table tbody td:nth-of-type(odd) {
+  border-width: 0 0 1px 1px;
+  text-align: right;
+}
+
+table tbody td:nth-of-type(even) {
+  border-width: 0 1px 1px 0;
+  text-align: left;
+}
+
+
+td, th {
+  border: 1px solid black;
+}
+
+table tbody th, table thead th {
+  padding: 0.2rem;
+}
+
+table tbody th {
+  background-color: #561D25;
+  color: white;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+
+table thead th {
+  background-color: #561D25;
+  color: white;
+  text-align: center;
+  padding-left: 0;
+}
+
+table thead td {
+  background-color: #E6DFD0;
+  border-left: 1px solid #E6DFD0;
+  border-top: 1px solid #E6DFD0;
+}
+
+table tfoot td {
+  text-align: center;
+  font-size: 10pt;
+}
+
+#other-phonemes {
+  text-align: center;
 }

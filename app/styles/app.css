@@ -1,9 +1,13 @@
 @import "foundation.min.css";
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Quicksand');
 
+/* EVERYTHING */
+
 * {
-  margin: 1em;
+  margin: 0.75em;
 }
+
+/* HTML TAGS */
 
 body {
   background-color: #E6DFD0;
@@ -15,12 +19,12 @@ body, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1, h2, h3 {
-  text-align: center;
-}
-
 h1 {
   font-family: 'Merienda One', cursive;
+}
+
+h1, h2, h3 {
+  text-align: center;
 }
 
 h2, h3, h4, h5, h6 {
@@ -31,49 +35,8 @@ p {
   text-align: justify;
 }
 
-a {
-  color: #A44200;
-}
-
-a:hover {
-  color: #0B3954;
-  font-weight: bold;
-}
-
-.active, a.active {
-  background-color: #653239;
-  color: #E6DFD0;
-}
-
-.button, .button.active, .button:hover {
-  background-color: #0B3954;
-  color: #FFFFFF;
-}
-
-.button:hover {
-  font-weight: bold;
-}
-
-.active:hover, a.active:hover, .button:hover {
-  font-weight: bold;
-}
-
-.menu {
-  border-bottom: 3px solid #653239;
-  font-weight: bold;
-}
-
-.menu li {
-  border-radius: 20 20 0 0;
-}
-
-#lang-phoneme, #vowels {
-  margin-left: 2.5em;
-  font-family: 'Times New Roman', serif;
-}
-
-#lang-phoneme li {
-  list-style: none;
+@media only screen and (max-width: 438px) {
+  p {text-align: left;}
 }
 
 small a {
@@ -82,22 +45,13 @@ small a {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 438px) {
-  p {text-align: left;}
+a {
+  color: #A44200;
 }
 
-.phonemes tbody td {
-  font-family: 'Times New Roman', serif;
-  font-size: 13pt;
-}
-
-.impossible {
-  background-color: #7c7b7b;
-}
-
-.phonemes table {
-  font-size: 11pt;
-  text-align: center;
+a:hover {
+  color: #0B3954;
+  font-weight: bold;
 }
 
 table tr:nth-of-type(even) {
@@ -114,23 +68,6 @@ table tbody td:nth-of-type(even) {
   text-align: left;
 }
 
-
-td, th {
-  border: 1px solid black;
-}
-
-table tbody th, table thead th {
-  padding: 0.2rem;
-}
-
-table tbody th {
-  background-color: #561D25;
-  color: white;
-  text-align: right;
-  padding-right: 0.5rem;
-}
-
-
 table thead th {
   background-color: #561D25;
   color: white;
@@ -144,9 +81,79 @@ table thead td {
   border-top: 1px solid #E6DFD0;
 }
 
+table tbody th, table thead th {
+  padding: 0.2rem;
+}
+
+table tbody th {
+  background-color: #561D25;
+  color: white;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
 table tfoot td {
   text-align: center;
   font-size: 10pt;
+}
+
+td, th {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* Foundation Class Overrides */
+
+.active, a.active {
+  background-color: #653239;
+  color: #E6DFD0;
+}
+
+.button, .button.active, .button:hover {
+  background-color: #0B3954;
+  color: #FFFFFF;
+}
+
+.active:hover, a.active:hover, .button:hover {
+  font-weight: bold;
+}
+
+.button:hover {
+  font-weight: bold;
+}
+
+.menu {
+  border-bottom: 3px solid #653239;
+  font-weight: bold;
+}
+
+/* Custom Classes and IDs */
+
+#vowels {
+  margin-left: 2.5em;
+}
+
+.impossible {
+  background-color: #7c7b7b;
+  cursor: default;
+}
+
+#consonants {
+  font-size: 11pt;
+  text-align: center;
+}
+
+.phonemes tbody td {
+  font-family: 'Times New Roman', serif;
+  font-size: 13pt;
+}
+
+.phonemes tbody td:hover {
+  background-color: #A2B178;
+}
+
+.phonemes tbody td:empty:hover {
+  background-color: transparent;
 }
 
 #other-consonants td {
@@ -160,7 +167,7 @@ table tfoot td {
 }
 
 #vowels th {
-  font-family: 'Quicksand', sans-serif;
+  /*font-family: 'Quicksand', sans-serif;*/
   text-align: center;
   border-left: 1px solid black;
 }

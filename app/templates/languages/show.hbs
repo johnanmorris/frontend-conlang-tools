@@ -8,17 +8,17 @@
   {{/if}}
 </p>
 
-<!-- <p><strong>Phonemes:</strong>
+<p><strong>Phonemes:</strong>
 {{#if model.phonemes}}
-<ul class="row small-up-2 medium-up-3 large-up-6" id="lang-phoneme">
-  {{#each model.phonemes as |phoneme|}}
-    <li class="column">{{phoneme.ipa}}</li>
-  {{/each}}
-</ul>
+  <ul class="row small-up-2 medium-up-3 large-up-6">
+    {{#each model.phonemes as |phoneme|}}
+      <li class="column">{{phoneme.ipa}} ({{phoneme.id}})</li>
+    {{/each}}
+  </ul>
 {{else}}
   None yet
 {{/if}}
-</p> -->
+</p>
 
 <h3>Consonants</h3>
 <section>

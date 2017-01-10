@@ -67,7 +67,7 @@ a:hover {
   border-radius: 20 20 0 0;
 }
 
-#lang-phoneme {
+#lang-phoneme, #vowels {
   margin-left: 2.5em;
   font-family: 'Times New Roman', serif;
 }
@@ -101,7 +101,7 @@ small a {
 }
 
 table tr:nth-of-type(even) {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 table tbody td:nth-of-type(odd) {
@@ -149,6 +149,31 @@ table tfoot td {
   font-size: 10pt;
 }
 
-#other-phonemes {
+#other-consonants td {
   text-align: center;
+  border-right: 1px solid black;
+}
+
+#vowels th, #vowels td {
+  border-left: 1px solid #E6DFD0;
+  border-right: 1px solid black;
+}
+
+#vowels th {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+#vowels tbody th {
+  text-align: right;
+}
+
+#vowels tbody td {
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+#vowels tbody {
+  border-right: 1px solid black;
 }

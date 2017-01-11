@@ -1,4 +1,3 @@
-import Ember from 'ember';
+import LanguagesController from '../languages';
 
-export default Ember.Controller.extend({
-});
+export default LanguagesController;

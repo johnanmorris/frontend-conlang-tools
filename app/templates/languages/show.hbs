@@ -8,6 +8,18 @@
   {{/if}}
 </p>
 
+<p><strong>Phonemes:</strong>
+{{#if model.phonemes}}
+  <span class="phonemes">
+  {{#each model.phonemes as |phoneme|}}
+    {{phoneme.ipa}}
+  {{/each}}
+  </span>
+{{else}}
+  None yet
+{{/if}}
+</p>
+
 {{phoneme-tables}}
 
 <section class="row">

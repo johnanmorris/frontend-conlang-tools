@@ -184,3 +184,9 @@ td, th {
 #vowels tbody {
   border-right: 1px solid black;
 }
+
+.selected-phone {
+  background-color: #789F6C;
+  color: #3D0B12;
+  font-weight: bold;
+}

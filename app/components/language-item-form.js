@@ -20,8 +20,11 @@ export default Ember.Component.extend({
     console.log("ID to add to lang: " + phoneID);
     if(phoneID > 0) {
       $(event.target).toggleClass("selected-phone");
-      this.get('phonemeIds').pushObject(phoneID);
+      if(this.get('phonemeIds').includes(phoneID)) {
+        this.get('phonemeIds').removeObject(phoneID);
+      } else{
+        this.get('phonemeIds').pushObject(phoneID);
+      }
     }
   }
-
 });

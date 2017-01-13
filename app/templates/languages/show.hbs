@@ -9,22 +9,43 @@
 </p>
 
 <!-- <p>
-  <strong>PHONEME IDS: {{model.phonemeIds}}</strong>
+  <strong>Phonemes:</strong>
+  {{#if model.phonemes}}
+    <span class="phonemes">
+      {{#each model.phonemes as |phoneme|}}
+        {{phoneme.ipa}}
+      {{/each}}
+    </span>
+  {{else}}
+    None yet
+  {{/if}}
 </p> -->
 
-<p><strong>Phonemes:</strong>
-{{#if model.phonemes}}
+<p>
+  <strong>Consonants:</strong>
+  {{#if model.consonants}}
   <span class="phonemes">
-  {{#each model.phonemes as |phoneme|}}
-    {{phoneme.ipa}}
+    {{#each model.consonants as |consonant|}}
+      {{consonant.ipa}}
   {{/each}}
   </span>
-{{else}}
-  None yet
-{{/if}}
+  {{else}}
+    None yet
+  {{/if}}
 </p>
 
-{{phoneme-tables}}
+<p>
+  <strong>Vowels:</strong>
+  {{#if model.vowels}}
+  <span class="phonemes">
+    {{#each model.vowels as |vowel|}}
+      {{vowel.ipa}}
+    {{/each}}
+  </span>
+  {{else}}
+    None yet
+  {{/if}}
+</p>
 
 <section class="row">
   <p class="large-offset-5 large-7 columns">

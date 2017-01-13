@@ -17,9 +17,14 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    saveLanguage(language) {
-      language.save().then(() => this.transitionTo('languages'));
+    cancelEdit(language){
+      language.rollbackAttributes();
     },
+
+    saveLanguage(language) {
+      language.save().then(() => this.transitionTo('languages.show', language.id));
+    },
+
     willTransition(transition) {
       let model = this.controller.get('model');
       if (model.get('hasDirtyAttributes')) {

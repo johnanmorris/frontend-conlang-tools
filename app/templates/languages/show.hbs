@@ -8,19 +8,6 @@
   {{/if}}
 </p>
 
-<!-- <p>
-  <strong>Phonemes:</strong>
-  {{#if model.phonemes}}
-    <span class="phonemes">
-      {{#each model.phonemes as |phoneme|}}
-        {{phoneme.ipa}}
-      {{/each}}
-    </span>
-  {{else}}
-    None yet
-  {{/if}}
-</p> -->
-
 <p>
   <strong>Consonants:</strong>
   {{#if model.consonants}}
@@ -48,9 +35,10 @@
 </p>
 
 <section class="row">
-  <p class="large-offset-5 large-7 columns">
-    {{#link-to 'languages.index' class='button'}}List All Languages{{/link-to}}
-  </p>
+  <section class="button-group large-offset-5 large-7 columns">
+    {{#link-to 'languages.edit' model class="warning button"}}Edit{{/link-to}}
+    {{#link-to 'languages.index' class="button"}}List All Languages{{/link-to}}
+  </section>
 </section>
 
 {{outlet}}

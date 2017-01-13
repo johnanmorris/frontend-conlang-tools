@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import $ from 'jquery';
+
 export default Ember.Component.extend({
   buttonLabel: 'Save',
   phonemeIds: [],
@@ -8,6 +9,7 @@ export default Ember.Component.extend({
       this.sendAction('action', param);
     }
   },
+
   click(event) {
     // var clicked = $(event.target).("td");
     var clickedID = $(event.target).attr("id");

@@ -19,8 +19,7 @@ export default Ember.Component.extend({
     var phoneID = parseInt(clickedID.slice(3));
 
     if(phoneID > 0) {
-      console.log("clickedID: " + clickedID);
-      console.log("ID to add to lang: " + phoneID);
+      console.log("ID clicked: " + phoneID);
       $(event.target).toggleClass("selected-phone");
       if(this.get('phonemeIds').includes(phoneID)) {
         this.get('phonemeIds').removeObject(phoneID);

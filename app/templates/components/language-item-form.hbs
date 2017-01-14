@@ -16,6 +16,13 @@
   </section>
 
 {{#if item.id}}
+
+<p>
+  {{#each item.phonemes as |phoneme|}}
+    {{phoneme.ipa}}
+  {{/each}}
+</p>
+
 <section class="row">
   <h3>Consonants</h3>
   <section>

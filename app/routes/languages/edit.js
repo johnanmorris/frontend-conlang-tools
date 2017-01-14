@@ -8,7 +8,7 @@ export default Ember.Route.extend({
   setupController(controller, model) {
     this._super(controller, model);
 
-    controller.set('title', 'Edit language');
+    controller.set('title', 'Edit Language');
     controller.set('buttonLabel', 'Save Changes');
   },
 

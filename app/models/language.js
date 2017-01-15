@@ -6,6 +6,7 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   phonemes: DS.attr(),
   phoneme_ids: DS.attr(),
+  words: DS.hasMany('word', {async: true}),
 
   consonants: Ember.computed.filterBy('phonemes', 'syllabic', false),
   vowels: Ember.computed.filterBy('phonemes', 'syllabic', true),

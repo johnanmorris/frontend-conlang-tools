@@ -1,5 +1,12 @@
-import ActiveModelAdapter from 'active-model-adapter';
+import Ember from 'ember';
+import DS from 'ember-data';
 
-export default ActiveModelAdapter.extend({
-  host: 'http://localhost:3000'
+const { String: { pluralize, underscore } } = Ember;
+
+export default DS.JSONAPIAdapter.extend({
+  host: 'http://localhost:3000',
+
+  pathForType(type) {
+    return pluralize(underscore(type));
+  }
 });

@@ -6,7 +6,11 @@
   <section class="column">
     <p>
       {{#link-to 'language' language}}{{language.name}}{{/link-to}}
-      <button class="small alert button" {{action 'deleteLanguage' language}}>delete</button>
+      <section class="small button-group">
+        {{#link-to 'languages.edit' language class="button"}}edit{{/link-to}}
+        <button class="alert button" {{action 'deleteLanguage' language}}>delete</button>
+      </section>
+
     </p>
   </section>
   {{/each}}

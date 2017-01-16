@@ -17,7 +17,7 @@ export default Ember.Route.extend({
 
   actions: {
     saveLanguage(language) {
-      language.save().then(() => this.transitionTo('languages.show', language.id));
+      language.save().then(() => this.transitionTo('language', language.id));
     },
     willTransition(){
       // rollbackAttributes() removes the

@@ -5,12 +5,8 @@
   {{#each model as |language|}}
   <section class="column">
     <p>
-      {{#link-to 'languages.show' language}}{{language.name}}{{/link-to}}
-
-      <section class="small button-group">
-        {{#link-to 'languages.edit' language class="button"}}edit details{{/link-to}}
-        <button class="alert button" {{action 'deleteLanguage' language}}>delete</button>
-      </section>
+      {{#link-to 'language' language}}{{language.name}}{{/link-to}}
+      <button class="small alert button" {{action 'deleteLanguage' language}}>delete</button>
     </p>
   </section>
   {{/each}}

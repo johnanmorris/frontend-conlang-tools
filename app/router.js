@@ -14,7 +14,6 @@ Router.map(function() {
     this.route('edit', {path: '/:language_id/edit'});
   });
   this.route('language', {path: '/languages/:language_id'}, function(){
-    this.route('words', {path: '/words'});
   });
 });
 

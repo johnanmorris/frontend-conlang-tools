@@ -1,4 +1,7 @@
-@import "foundation.min.css";
+@import "settings";
+@import 'foundation-sites/foundation';
+@include foundation-everything;
+
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Quicksand');
 
 /* EVERYTHING */

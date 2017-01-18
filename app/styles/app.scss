@@ -57,6 +57,10 @@ a:hover {
   font-weight: bold;
 }
 
+table {
+  border-spacing: 0;
+}
+
 table tr:nth-of-type(even) {
   background-color: transparent !important;
 }

@@ -30,23 +30,47 @@
       <thead>
         <tr>
           <td></td>
-          <th colspan="2">Bi<wbr>labial</th>
-          <th colspan="2">Labio<wbr>dental</th>
-          <th colspan="2">Den<wbr>tal</th>
-          <th colspan="2">Alve<wbr>olar</th>
-          <th colspan="2">Post<wbr>alveolar</th>
-          <th colspan="2">Retro<wbr>flex</th>
-          <th colspan="2">Pala<wbr>tal</th>
-          <th colspan="2">Ve<wbr>lar</th>
-          <th colspan="2">Uvu<wbr>lar</th>
-          <th colspan="2">Phary<wbr>ngeal</th>
-          <th colspan="2">Glot<wbr>tal</th>
+          <th colspan="2">
+            {{#zf-tooltip title="both lips"}}Bi<wbr>labial{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="lower lip and upper teeth"}}Labio<wbr>dental{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="tongue against the upper teeth"}}Den<wbr>tal{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="tongue against the alveolar ridge"}}Alve<wbr>olar{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="tongue against the back of the alveolar ridge"}}Post<wbr>alveolar{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="tip of the tongue curled back between the alveolar ridge and the hard palate"}}Retro<wbr>flex{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="body of the tongue against the hard palate"}}Pala<wbr>tal{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="back of the tongue against the soft palate"}}Ve<wbr>lar{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="back of the tongue against the uvula"}}Uvu<wbr>lar{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="made with the pharynx (back of the throat)"}}Phary<wbr>ngeal{{/zf-tooltip}}
+          </th>
+          <th colspan="2">
+            {{#zf-tooltip title="made with the glottis (vocal cords)"}}Glot<wbr>tal{{/zf-tooltip}}
+          </th>
         </tr>
       </thead>
 
        <tbody>
         <tr>
-          <th>Plosive</th>
+          <th>
+            {{#zf-tooltip title="airflow completely stops"}}Plosive{{/zf-tooltip}}
+          </th>
           <!-- onclick="ipa('Voiceless_bilabial_plosive'); -->
           <td id="ph-1">p</td>
           <td id="ph-2">b</td>
@@ -69,7 +93,9 @@
         </tr>
 
         <tr>
-          <th>Nasal</th>
+          <th>
+            {{#zf-tooltip title="air flows through the nose"}}Nasal{{/zf-tooltip}}
+          </th>
           <td><!--empty --></td>
           <td id="ph-14">m</td>
           <td><!--empty --></td>
@@ -91,7 +117,9 @@
         </tr>
 
         <tr>
-          <th>Trill</th>
+          <th>
+            {{#zf-tooltip title="vibrating"}}Trill{{/zf-tooltip}}
+          </th>
           <td><!--empty --></td>
           <td id="ph-21">ʙ</td>
           <td><!--empty --></td>
@@ -113,7 +141,9 @@
         </tr>
 
         <tr>
-          <th>Tap/Flap</th>
+          <th>
+            {{#zf-tooltip title="quick throwing of lips or tongue"}}Tap/Flap{{/zf-tooltip}}
+          </th>
           <td><!--empty --></td>
           <td><!--empty --></td>
           <td><!--empty --></td>
@@ -134,7 +164,9 @@
         </tr>
 
         <tr>
-          <th>Fricative</th>
+          <th>
+            {{#zf-tooltip title="air forced through a narrow channel"}}Fricative{{/zf-tooltip}}
+          </th>
           <td id="ph-27">ɸ</td>
           <td id="ph-28">β</td>
           <td id="ph-29">f</td>
@@ -160,7 +192,9 @@
         </tr>
 
         <tr>
-          <th>Lateral Fricative</th>
+          <th>
+            {{#zf-tooltip title="fricative with airflow around the sides of the tongue"}}Lateral Fricative{{/zf-tooltip}}
+          </th>
           <td class="impossible"><!--empty --></td>
           <td class="impossible"><!--empty --></td>
           <td class="impossible"><!--empty --></td>
@@ -182,7 +216,9 @@
         </tr>
 
         <tr>
-          <th>Approximant</th>
+          <th>
+            {{#zf-tooltip title="articulators approaching each other, with no air turbulence"}}Approximant{{/zf-tooltip}}
+          </th>
           <td><!--empty --></td>
           <td><!--empty --></td>
           <td><!--empty --></td>
@@ -204,7 +240,9 @@
         </tr>
 
         <tr>
-          <th>Lateral Approximant</th>
+          <th>
+            {{#zf-tooltip title="approximant with airflow around the sides of the tongue"}}Lateral Approximant{{/zf-tooltip}}
+          </th>
           <td class="impossible"><!--empty --></td>
           <td class="impossible"><!--empty --></td>
           <td class="impossible"><!--empty --></td>
@@ -283,7 +321,7 @@
         </tr>
         <tr>
           <td id="ph-68">t͡s</td>
-          <td>voiceless alveolar affricate</td>
+          <td>voiceless alveolar {{#zf-tooltip title="begins as a stop and releases as a fricative"}}affricate{{/zf-tooltip}}</td>
         </tr>
         <tr>
           <td id="ph-69">d͡z</td>

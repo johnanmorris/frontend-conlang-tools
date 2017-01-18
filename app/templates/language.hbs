@@ -11,6 +11,19 @@
 </p>
 
 <p>
+{{#if model.phonemes}}
+  <span class="phonemes">
+    {{#each model.phonemes as |phoneme|}}
+      {{phoneme.ipa}}
+    {{/each}}
+  </span>
+  {{else}}
+  none
+{{/if}}
+</p>
+
+
+<!-- <p>
   <strong>Consonants:</strong>
   {{#if model.consonants}}
   <span class="phonemes">
@@ -34,7 +47,7 @@
   {{else}}
     None yet
   {{/if}}
-</p>
+</p> -->
 
 <p>
   <strong>Words:</strong>

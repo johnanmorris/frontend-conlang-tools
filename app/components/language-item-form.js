@@ -3,10 +3,29 @@ import $ from 'jquery';
 
 export default Ember.Component.extend({
   buttonLabel: 'Save',
+  tds: [],
   phonemeIds: [],
   actions: {
     buttonClicked(param){
       this.sendAction('action', param);
+    }
+  },
+
+  init: function() {
+    this._super(...arguments);
+    var phonemes = this.get('item.phonemes');
+    console.log("Language has " + phonemes.length + " phonemes");
+    for(var i=0; i< phonemes.length; i++) {
+      this.tds.push("#ph-" + phonemes[i].id);
+    }
+    console.log("init");
+  },
+
+  didInsertElement(){
+    this._super(...arguments);
+    console.log("didInsertElement");
+    for(var i=0; i< this.tds.length; i++){
+      $(this.tds[i]).addClass("selected-phone");
     }
   },
 

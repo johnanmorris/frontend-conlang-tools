@@ -1,5 +1,9 @@
 <strong>FORM.HBS</strong>
 
 <h2>{{title}}</h2>
-{{language-item-form item=model buttonLabel=buttonLabel phonemeIds=model.phoneme_ids action="saveLanguage"}}
+{{language-item-form
+  item=model
+  buttonLabel=buttonLabel
+  phonemeIds=model.phoneme_ids
+  action="saveLanguage"}}
 {{outlet}}

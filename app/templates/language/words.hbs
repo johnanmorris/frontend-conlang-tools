@@ -1,0 +1,15 @@
+<strong>language/words.hbs</strong>
+{{#if model.words}}
+  <section class="row">
+  {{#each model.words as |word|}}
+    <p class="small-up-2 medium-up-3 large-up-6 columns">
+      <span class="phonemes"><strong>{{word.form}}</strong></span>
+      {{word.translation}}
+    </p>
+  {{/each}}
+  </section>
+{{else}}
+  None yet.
+{{/if}}
+
+{{outlet}}

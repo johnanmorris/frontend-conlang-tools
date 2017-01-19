@@ -14,12 +14,7 @@ export default Ember.Component.extend({
 
   init: function() {
     this._super(...arguments);
-    var phonemes = this.get('item.phonemes');
-    if (phonemes){
-      console.log("yay!");
-      console.log(phonemes.length);
-    }
-    var phoneIds = this.get('item.phonemeIds');
+    var phoneIds = this.get('phonemeIds');
 //    console.log(phoneIds[0]);
     if (phoneIds) {
 //      console.log("Language has " + phoneIds.length + " phonemes");

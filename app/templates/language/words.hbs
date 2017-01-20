@@ -1,4 +1,14 @@
 <h2>{{model.name}}</h2>
+
+<section class="row">
+  <p class="small-12 large-12 columns">
+    To add a new word to {{model.name}}, enter the word and its translation in the text fields below. To edit a word, click
+    on the word.
+  </p>
+</section>
+
+  {{outlet}}
+
 {{#if model.words}}
   <div class="row wordlist">
     <h4 class="small-4 large-4 columns">Word</h4>
@@ -6,18 +16,14 @@
   </div>
   {{#each model.words as |word|}}
   <div class="row wordlist">
-    <span class="phonemes small-4 large-4 columns"><strong>{{word.form}}</strong></span>
+    <span class="phonemes small-4 large-4 columns">{{#link-to 'language.words.edit' word}}{{word.form}}{{/link-to}}</span>
     <span class="small-4 large-4 columns end">{{word.translation}}</span>
   </div>
   {{/each}}
 
 {{else}}
-  None yet.
+  None yet. Why don't you add some?
 {{/if}}
-
-<div class="row collapse">
-  {{outlet}}
-</div>
 
 <section class="row">
   <section class="button-group large-offset-5 large-7 columns">

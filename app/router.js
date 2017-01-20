@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('language', {path: '/languages/:language_id'}, function() {
     this.route('words', function() {
       this.route('new');
+      this.route('edit', {path: '/:word_id/edit'});
     });
   });
 });

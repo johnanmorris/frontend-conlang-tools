@@ -1,9 +1,10 @@
+
 <section class="row collapse">
   <form>
     <span class="small-3 large-3 columns">
       <label>
         Conlang Word:
-          {{input type="text" value=model.form placeholder="new word" required=true}}
+          {{input type="text" value=model.form placeholder="edit word" required=true}}
       </label>
     </span>
     <span class="small-3 large-3 columns">
@@ -17,7 +18,7 @@
         type="submit"
         disabled={{unless model.wordIsValid true}}
         class="small button"
-        {{action 'saveWord' model}}>add new word</button>
+        {{action 'saveWord' model}}>edit word</button>
     </span>
   </form>
 </section>

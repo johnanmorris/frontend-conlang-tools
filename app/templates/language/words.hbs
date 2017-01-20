@@ -18,3 +18,10 @@
 <div class="row collapse">
   {{outlet}}
 </div>
+
+<section class="row">
+  <section class="button-group large-offset-5 large-7 columns">
+    {{#link-to 'language' model.id class="success button"}}{{model.name}} Home{{/link-to}}
+    {{#link-to 'languages.index' class="button"}}List All Languages{{/link-to}}
+  </section>
+</section>

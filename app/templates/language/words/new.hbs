@@ -11,8 +11,12 @@
         {{input type="text" value=model.translation placeholder="translation" required=true}}
     </label>
   </span>
-  <span class="small-3 large-3 columns end">
-    <button type="submit" disabled={{unless model.wordIsValid true}} class="small button" {{action 'saveWord' model}}>add new word</button>
+  <span class="small-3 large-3 columns verticalcenter end">
+    <button
+      type="submit"
+      disabled={{unless model.wordIsValid true}}
+      class="small button"
+      {{action 'saveWord' model}}>add new word</button>
   </span>
 </form>
 

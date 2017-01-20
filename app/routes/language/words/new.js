@@ -24,14 +24,3 @@ export default Ember.Route.extend({
     }
   }
 });
-
-
-// // setupController: function(controller, model) {
-// //   this._super(controller, model);
-// //   controller.set('title', 'Create a New Language');
-// //   controller.set('buttonLabel', 'Create language');
-// // },
-// //
-// // renderTemplate() {
-// //   this.render('languages/form');
-// // },

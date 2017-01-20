@@ -8,6 +8,6 @@ export default DS.Model.extend({
   formIsValid: Ember.computed.notEmpty('form'),
   translationIsValid: Ember.computed.notEmpty('translation'),
   wordIsValid: Ember.computed('form','translation', function(){
-    return (this.get('form') !== null) && (this.get('translation') !== null);
+    return (this.get('formIsValid')) && (this.get('translationIsValid'));
   })
 });

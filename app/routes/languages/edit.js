@@ -19,14 +19,6 @@ export default Ember.Route.extend({
 
   actions: {
     saveLanguage(language) {
-      // this.set('phonemeIds', 'phonemeIds');
-      // var store = this.get('store');
-      // var phonemeIds = language.get('phonemeIds');
-      // phonemeIds.forEach(function(number){
-      //   // var phoneme = store.findRecord('phoneme', number);
-      //   // debugger;
-      //   language.get('phonemes').pushObject(phoneme);
-      // });
       language.save().then(() => this.transitionTo('language', language.id));
     },
 

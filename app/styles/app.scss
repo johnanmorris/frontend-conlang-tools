@@ -3,7 +3,6 @@
 @include foundation-everything;
 
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Quicksand');
-
 /* EVERYTHING */
 
 * {
@@ -22,7 +21,7 @@ body, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1 {
+h1{
   font-family: 'Merienda One', cursive;
 }
 
@@ -196,4 +195,13 @@ td, th {
   background-color: #789F6C;
   color: #3D0B12;
   font-weight: bold;
+}
+
+.wordlist .columns {
+  margin: 0;
+  text-align: left;
+}
+
+.wordlist h4 {
+  text-decoration: underline;
 }

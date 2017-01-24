@@ -8,6 +8,19 @@ module.exports = function(deployTarget) {
     // include other plugin configuration that applies to all deploy targets here
     'revision-data': {
       type: 'git-commit'
+    },
+    's3-index': {
+      accessKeyId: process.env['S3_ACCESS_KEY'],
+      secretAccessKey: process.env['S3_SECRET_ACCESS_KEY'],
+      bucket: "conlang-engine.com",
+      region: "us-west-2",
+      allowOverwrite: true
+    },
+    's3': {
+      accessKeyId: process.env['S3_ACCESS_KEY'],
+      secretAccessKey: process.env['S3_SECRET_ACCESS_KEY'],
+      bucket: "conlang-engine.com",
+      region: "us-west-2"
     }
   };
 

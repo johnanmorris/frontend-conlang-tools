@@ -1,17 +1,16 @@
-
 <section class="row collapse">
   <form>
     <span class="small-3 large-3 columns">
-      <label>
-        Conlang Word:
-          {{input type="text" value=model.form placeholder="edit word" required=true}}
+      <label for="model.form">
+        Word:
       </label>
+      {{input type="text" value=model.form placeholder="edit word" required=true}}
     </span>
     <span class="small-3 large-3 columns">
-      <label>
+      <label for="model.translation">
         Translation:
-          {{input type="text" value=model.translation placeholder="translation" required=true}}
       </label>
+      {{input type="text" value=model.translation placeholder="translation" required=true}}
     </span>
     <span class="small-3 large-3 columns verticalcenter end">
       <button

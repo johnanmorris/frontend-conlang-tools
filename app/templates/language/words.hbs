@@ -10,21 +10,23 @@
   {{outlet}}
 
 {{#if model.words}}
-  <div class="row wordlist">
-    <h4 class="small-3 large-3 columns">Word</h4>
-    <h4 class="small-3 large-3 columns end">Translation</h4>
+<section class="row wordlist">
+  <div class="row">
+    <h4 class="small-5 large-3 columns">Word</h4>
+    <h4 class="small-5 large-3 columns end">Translation</h4>
   </div>
   {{#each model.words as |word|}}
-    <section class="row wordlist">
-      <span class="phonemes small-3 large-3 columns">
+    <section class="row">
+      <span class="phonemes small-5 large-3 columns">
         {{#link-to 'language.words.edit' word}}{{word.form}}{{/link-to}}
       </span>
-      <span class="small-3 large-3 columns end">
+      <span class="small-5 large-3 columns end">
         {{word.translation}}
         {{#if word.id}}<sup><button {{action 'deleteWord' word}}>delete</button></sup>{{/if}}
       </span>
     </section>
   {{/each}}
+</section>
 {{/if}}
 
 <section class="row">

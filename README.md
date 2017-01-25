@@ -4,6 +4,10 @@ Academy capstone project. It is deployed here:
 
 http://www.conlang-engine.com
 
+The code for the Rails back end lives here:
+
+https://github.com/johnanmorris/conlang-tools-api
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

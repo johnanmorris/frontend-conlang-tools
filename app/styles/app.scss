@@ -21,15 +21,12 @@ body, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1{
+h1, h2 {
   font-family: 'Merienda One', cursive;
-}
-
-h1, h2, h3 {
   text-align: center;
 }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
@@ -39,6 +36,9 @@ p {
 
 @media only screen and (max-width: 438px) {
   p {text-align: left;}
+  .row.phonelist {
+    line-height: 1;
+  }
 }
 
 small a {
@@ -214,6 +214,10 @@ td, th {
 
 .row.collapse span {
   padding: 0;
+}
+
+.row.phonelist, .row.phonelist span {
+  margin: 0;
 }
 
 sup button {

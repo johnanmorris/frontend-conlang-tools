@@ -1,43 +1,189 @@
-<h2>{{model.name}}</h2>
-<p>
-  <strong>Description:</strong>
-  {{#if model.description}}
-     {{model.description}}
-  {{else}}
-    None
-  {{/if}}
-</p>
+<main class="column row">
+  <h2>{{model.name}}</h2>
 
-<p>
-  <strong>Consonants:</strong>
-  {{#if model.consonants}}
-  <span class="phonemes">
-    {{#each model.consonants as |consonant|}}
-      {{consonant.ipa}}
-  {{/each}}
-  </span>
-  {{else}}
-    None yet
-  {{/if}}
-</p>
-
-<p>
-  <strong>Vowels:</strong>
-  {{#if model.vowels}}
-  <span class="phonemes">
-    {{#each model.vowels as |vowel|}}
-      {{vowel.ipa}}
-    {{/each}}
-  </span>
-  {{else}}
-    None yet
-  {{/if}}
-</p>
-
-<section class="row">
-  <section class="button-group small-offset-3 small-7 medium-offset-2 medium-10 large-offset-4 large-7 columns">
-    {{#link-to 'language.words.new' model.id class="secondary button"}}Add/Edit Words{{/link-to}}
-    {{#link-to 'languages.edit' model.id class="warning button"}}Add/Edit Phonemes{{/link-to}}
-    {{#link-to 'languages.index' class="button"}}All Languages{{/link-to}}
+  <section class="row">
+    <section class="small-12 large-12 columns">
+      <h3>Description</h3>
+      {{#if model.description}}
+        <p>{{model.description}}</p>
+      {{else}}
+        <p>None yet.</p>
+      {{/if}}
+    </section>
   </section>
-</section>
+
+  <section class="row">
+    <section class="small-12 large-5 columns">
+      <h3>Consonants</h3>
+        {{#if model.consonants}}
+
+        {{#if model.plosives}}
+        <p class="row phonelist">
+          <span class="small-5 large-3 columns">
+            <strong>Plosives:</strong>
+          </span>
+          <span class="phonemes small-4 large-4 columns end">
+            {{#each model.plosives as |plosive|}}
+              {{plosive.ipa}}
+            {{/each}}
+          </span>
+        </p>
+        {{/if}}
+
+        {{#if model.nasals}}
+        <p class="row phonelist">
+          <span class="small-5 large-3 columns">
+            <strong>Nasals:</strong>
+          </span>
+          <span class="phonemes small-4 large-4 columns end">
+            {{#each model.nasals as |nasal|}}
+              {{nasal.ipa}}
+            {{/each}}
+          </span>
+        </p>
+        {{/if}}
+
+          {{#if model.trills}}
+          <p class="row phonelist">
+            <span class="small-5 large-3 columns">
+              <strong>Trills:</strong>
+            </span>
+            <span class="phonemes small-4 large-4 columns end">
+              {{#each model.trills as |trill|}}
+                {{trill.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+          {{#if model.taps}}
+          <p class="row phonelist">
+            <span class="small-5 large-3 columns">
+              <strong>Taps:</strong>
+            </span>
+            <span class="phonemes small-5 large-5 columns end">
+              {{#each model.taps as |tap|}}
+                {{tap.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+          {{#if model.fricatives}}
+          <p class="row phonelist">
+            <span class="small-5 large-3 columns">
+              <strong>Fricatives:</strong>
+            </span>
+            <span class="phonemes small-5 large-5 columns end">
+              {{#each model.fricatives as |fricative|}}
+                {{fricative.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+          {{#if model.laterals}}
+          <p class="row phonelist">
+            <span class="small-5 large-3 columns">
+              <strong>Laterals:</strong>
+            </span>
+            <span class="phonemes small-4 large-4 columns end">
+              {{#each model.laterals as |lateral|}}
+                {{lateral.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+          {{#if model.approximants}}
+          <p class="row phonelist">
+            <span class="small-5 large-3 columns">
+              <strong>Approximants:</strong>
+            </span>
+            <span class="phonemes small-4 large-4 columns end">
+              {{#each model.approximants as |approx|}}
+                {{approx.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+          {{#if model.affricates}}
+          <p class="row phonelist">
+            <span class="small-5 large-3 columns">
+              <strong>Affricates:</strong>
+            </span>
+            <span class="phonemes small-4 large-4 columns end">
+              {{#each model.affricates as |aff|}}
+                {{aff.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+        {{else}}
+          <p>
+            You haven&lsquo;t added any consonants yet.
+          </p>
+        {{/if}}
+    </section>
+
+    <section class="small-12 large-4 columns end">
+      <h3>Vowels</h3>
+        {{#if model.vowels}}
+
+          {{#if model.high}}
+          <p class="row phonelist">
+            <span class="small-2 large-3 columns">
+              <strong>High:</strong>
+            </span>
+            <span class="phonemes small-4 large-4 columns end">
+              {{#each model.high as |high|}}
+                {{high.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+          {{#if model.mid}}
+          <p class="row phonelist">
+            <span class="small-2 large-3 columns">
+              <strong>Mid:</strong>
+            </span>
+            <span class="phonemes small-4 large-4 columns end">
+              {{#each model.mid as |mid|}}
+                {{mid.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+          {{#if model.low}}
+          <p class="row phonelist">
+            <span class="small-2 large-3 columns">
+              <strong>Low:</strong>
+            </span>
+            <span class="phonemes small-4 large-4 columns end">
+              {{#each model.low as |low|}}
+                {{low.ipa}}
+              {{/each}}
+            </span>
+          </p>
+          {{/if}}
+
+        {{else}}
+          <p>
+            You haven&lsquo;t added any vowels yet.
+          </p>
+        {{/if}}
+    </section>
+  </section>
+
+  <section class="row">
+    <section class="button-group small-offset-3 small-7 medium-offset-2 medium-10 large-offset-4 large-7 columns">
+      {{#link-to 'languages.edit' model.id class="warning button"}}Add/Edit Phonemes{{/link-to}}
+      {{#link-to 'language.words.new' model.id class="secondary button"}}Add/Edit Words{{/link-to}}
+      {{#link-to 'languages.index' class="button"}}All Languages{{/link-to}}
+    </section>
+  </section>
+</main>

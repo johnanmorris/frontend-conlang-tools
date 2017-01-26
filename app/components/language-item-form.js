@@ -13,6 +13,7 @@ export default Ember.Component.extend({
 
   init: function() {
     this._super(...arguments);
+    this.tds = [];
     var phoneIds = this.get('phonemeIds');
     if (phoneIds) {
       for(var i=0; i< phoneIds.length; i++) {

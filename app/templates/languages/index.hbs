@@ -1,11 +1,12 @@
 <h2>Your Languages</h2>
-<article class="row small-up-1 medium-up-4 large-up-6">
+<article class="row small-up-1 medium-up-3 large-up-6">
   {{#each model as |language|}}
   <section class="column">
     <p>
-      {{#link-to 'language' language}}{{language.name}}{{/link-to}}
-      <section class="small button-group">
-        {{#link-to 'languages.edit' language class="button"}}edit{{/link-to}}
+      <div class="lang-name">{{#link-to 'language' language}}{{language.name}}{{/link-to}}</div>
+      <section class="small stacked button-group">
+        {{#link-to 'languages.edit' language class="secondary button"}}edit phonemes{{/link-to}}
+        {{#link-to 'language.words.new' language class="button"}}edit words{{/link-to}}
         <button class="alert button" {{action 'deleteLanguage' language}}>delete</button>
       </section>
 

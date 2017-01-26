@@ -18,6 +18,7 @@ Router.map(function() {
       this.route('edit', {path: '/:word_id/edit'});
     });
   });
+  this.route('not-found', {path: '/*path'});
 });
 
 export default Router;

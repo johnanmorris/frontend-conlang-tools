@@ -7,7 +7,7 @@ export default DS.Model.extend({
   phonemes: DS.attr(),
   phoneme_ids: DS.attr(),
   words: DS.hasMany('word'),
-
+  nonDeletedWords: Ember.computed.filterBy('words', 'isDeleted', false),
   isValid: Ember.computed.notEmpty('name'),
 
   consonants: Ember.computed.filterBy('phonemes', 'syllabic', false),

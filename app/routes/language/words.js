@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     deleteWord(word){
       let confirmation = confirm("Are you sure? this action is irreversible");
       if(confirmation){
-        word.destroyRecord();
+        word.deleteRecord();
+        word.save();
       }
     }
   }
